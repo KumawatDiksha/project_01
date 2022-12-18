@@ -4,9 +4,9 @@ this.innerHTML = `
 
     <header style="z-index:10;">
         <div class="nav">
-            <a id="logo" style="transition: all .3s ease-in-out ;" >
+            <a id="logo" style="transition: all .3s ease-in-out ;" href="https://kumawatdiksha.github.io/project_01/">
                 <h1> ToLet Plus </h1> <a>
-                    <a class="nav_ele" href="./post_property_form_page/post_property_form_page.html ">
+                    <a class="nav_ele" href="https://kumawatdiksha.github.io/project_01/post_property_form_page/post_property_form_page.html ">
                         <button>Post prperty here</button></a>
 
 
