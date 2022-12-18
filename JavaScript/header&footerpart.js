@@ -4,9 +4,9 @@ this.innerHTML = `
 
     <header style="z-index:10;">
         <div class="nav">
-            <a id="logo" style="transition: all .3s ease-in-out ;" href="/">
+            <a id="logo" style="transition: all .3s ease-in-out ;" >
                 <h1> ToLet Plus </h1> <a>
-                    <a class="nav_ele" href="/post_property_form_page/post_property_form_page.html ">
+                    <a class="nav_ele" href="./post_property_form_page/post_property_form_page.html ">
                         <button>Post prperty here</button></a>
 
 
@@ -106,7 +106,7 @@ this.innerHTML = `
                                 style="font-size: 20vw; padding-bottom: 0vw; color: #ececec;"> account_circle </div>
                             <div class="userinfo">
                                 <a id="username">UserName</a>
-                                <a href="/desh_board_for_property-owner/Profile.html">
+                                <a href="../desh_board_for_property-owner/Profile.html">
                                     <div class="editprofile"> <b> Edit profile </b></div>
                                 </a>
                             </div>
@@ -117,7 +117,7 @@ this.innerHTML = `
                                 Login</div>
 
                             <div id="submenulist0"> Account </div>
-                            <a href="/desh_board_for_property-owner/Profile.html">
+                            <a href="../desh_board_for_property-owner/Profile.html">
                                 <div class="submenulist"> Personal info </div>
                             </a>
                             <div onclick="document.getElementById('#').style.display='block'" class="submenulist"> Massages
@@ -126,11 +126,11 @@ this.innerHTML = `
                             <hr>
 
                             <div id="submenulist0"> Property </div>
-                            <a href=" /post_property_form_page/post_property_form_page.html ">
+                            <a href=" ../post_property_form_page/post_property_form_page.html ">
                                 <div class="submenulist"> Post prperty hare </div>
                             </a>
 
-                            <a href="/desh_board_for_property-owner/Property Listings.html">
+                            <a href="../desh_board_for_property-owner/Property Listings.html">
                                 <div class="submenulist"> Manage your property </div>
                             </a>
                             <hr>
@@ -178,7 +178,7 @@ this.innerHTML = `
                                     <option value="Warehouse">Warehouse</option>
                                 </select>
                                 <hr>
-                                <a href="/propertylistpage/propertylistpage.html"> <button
+                                <a href="../propertylistpage/propertylistpage.html"> <button
                                         class="search_button material-icons" type="search">search</button> </a>
 
                             </div>
@@ -204,17 +204,17 @@ this.innerHTML = `
     <div id="footer">
 
         <ul>
-            <li><a href="/footer/about.html">About Us</a></li>
-            <li><a href="/footer/blog/blogs.html">Blog</a></li>
-            <li><a href="/footer/contect_us/contect_us.html">Contact Us</a></li>
-            <li><a href="/footer/feedback.html">Feedback</a></li>
-            <li><a href="/footer/FAQ/FAQ.html">FAQ</a></li>
+            <li><a href="../footer/about.html">About Us</a></li>
+            <li><a href="../footer/blog/blogs.html">Blog</a></li>
+            <li><a href="../footer/contect_us/contect_us.html">Contact Us</a></li>
+            <li><a href="../footer/feedback.html">Feedback</a></li>
+            <li><a href="../footer/FAQ/FAQ.html">FAQ</a></li>
             <hr>
         </ul>
         <div class="sub-footer">
             <a>&copy All rights reserved </a>
-            <a href="/footer/Privacy Policy.html">Privacy Policy </a>
-            <a href="/footer/terms&conditions.html">Terms & Conditions</a>
+            <a href="../footer/Privacy Policy.html">Privacy Policy </a>
+            <a href="../footer/terms&conditions.html">Terms & Conditions</a>
         </div>
     </div>
 </footer>
