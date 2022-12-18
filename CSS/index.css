@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* for include font-femily in html */
+html{
+    font-family: 'Quicksand', 'Circular';
+}
+
+
+
+/* main part start hare */
+main{
+    padding: 2vw 5vw 2vw 13vw;
+    }
+    /* class for large font size */
+    p.large-font{
+    font-size: 4vw;
+    font-weight: bolder;
+    margin-left: 1.7vw;
+    }
+
+
+
+    /* property-categaries classes */
+    /* .property-categaries{margin-left:4vw;} */
+    .property-categaries a{
+        text-decoration: none;
+    }
+    .property-categaries h1{
+        color:white;
+        padding: 1.5vw 2vw;
+        font-size:2vw ;
+        text-shadow: 0px 0px 2px #4e4e4e;
+        }
+       
+          /* categaroes list on home page  */
+
+    /* css for all box exclude home box */
+    .categary-box{
+        margin: 2vw;
+        width: 20vw;
+        height:20vw;
+        background-image: url('CSSmedia/shop.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1vw;
+        display: inline-block;
+        cursor: pointer;
+        border: none;
+    }
+    
+    
+    /* homes  */
+    .home{
+        cursor: pointer;
+        margin:2vw;
+        width: 20vw;
+        height:20vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1vw;
+        display: inline-block;
+        border: none;
+    }
+
+/* main part end hare */
+
+

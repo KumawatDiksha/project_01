@@ -1,0 +1,279 @@
+@media screen and  (max-width:1000px){
+  
+  
+    *{
+    margin: 0;
+    padding: 0;
+  }
+  
+  main{
+    margin: 20vw 0vw 0vw 2vw;
+    min-height: 80vh;
+  }
+
+  .lines{
+    display: none;
+}
+
+  #search{
+    display: block;
+  }
+  .front{
+    padding: .5vw 0%;
+  }
+
+  .backbtn {
+    padding: .2vw 2.9vw .5vw 2.7vw;
+    z-index: 1;
+    position: fixed;
+    left: 1%;
+    top: 4%;
+    font-size: 6vw;
+    font-weight: bolder;
+    border-radius: 100px;
+    background-color: #f9fbff;
+    border: 1px solid rgb(250, 250, 250);
+    color: #acacac;
+    display: block;
+  }
+  
+  .backbtn{
+      padding: .2vw 2.9vw .5vw 2.7vw;
+      z-index: 1;
+      position: fixed;
+    left: 1%;
+    top: 4%;
+    font-size: 6vw;
+    font-weight: bolder;
+    border-radius:100px ;
+    background-color: #f9fbff;
+    border:1px solid rgb(250, 250, 250) ;
+    color: #acacac;
+    display: none;}
+  
+    .inline {
+      position: fixed;
+      background: white;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      width: 100vw;
+      margin-left: -8px;
+      padding: 2px;
+      transform: .3s ease-in-out;
+    }
+
+    .inline::-webkit-scrollbar{
+      display: none;
+    }
+    
+    select,
+    .filter{
+      font-size: 2vh;
+      border: 1px solid rgb(221, 220, 220);
+      margin: 1.5vw 2.5vw 2.5vw 0.5vw;
+      padding: 0vw 3%;
+      height: 4vh;
+      border-radius: 23vh;
+      width: auto;
+      background-color: white;
+  }
+
+.filter:hover{
+    border:1px solid purple;
+}
+
+
+
+  
+
+/* mapApi class hare  */
+.mapApi{
+    display: none;
+  }
+  
+  
+  /* for the home container of property info */
+  .propertyimages{
+    padding: 1vw 1vw;
+    display: flex;
+    width: 100%;
+  }
+  
+  /* image slideshow container start hare  */
+  
+  * {box-sizing:border-box}
+  
+  /* Slideshow container */
+  .slideshow-container {
+      z-index: -1;
+      scroll-snap-type: x mandatory;
+      overflow: hidden;
+      overflow-x: scroll;
+      margin: auto;
+      width: 49vw;
+      height: 30vw;
+      position: relative;
+      flex: none;
+      display: flex;
+    }
+
+    .slideshow-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .mySlides{
+      text-align: center;
+      scroll-snap-align: center;
+      flex: none;
+      height: 14vw;
+    }
+    
+    /* Hide the images by default */
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    z-index: 5;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+      top: 19%;
+      width: auto;
+      margin-top: -2.2vw;
+      padding: 1.6vw;
+      color: white;
+      font-weight: bold;
+      font-size: 4vw;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 49vw;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 1vw;
+      padding: .8vw 1.5vw;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 1.5vw;
+      width: 1.5vw;
+      margin: 0 .3vw;
+      background-color: white;
+      border-radius: 45%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .dotposition{
+      position: absolute;
+      bottom: 0%;
+      left: 40%;
+      
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    
+    
+    
+    /* property detail container start from hare  */
+    .propertydetail{
+      display: grid;
+      grid-template-areas:
+      'property_location property_location '
+      'address address'
+      'deatiles price'
+      'available_from contect_owner' 
+      ;
+      width: 46vw;
+      height: 31vw;
+      margin: 0% 3%;
+    }
+    
+    
+    .property_location{
+    font-size: 3.2vw;
+    grid-area: property_location;
+  }
+  .address{
+    margin-top: -4vw;
+    grid-area: address;
+    font-size: 2vw;
+  }   
+  
+  .deatiles{
+    grid-area: deatiles;
+    font-size: 1.5vw;
+  }
+  
+  .contect_owner{
+    grid-area: contect_owner;
+    color: white;
+    width:18vw;
+    height:4vw;
+    background-color:rgb(255, 81, 0);
+    font-size: 2vw;
+    border-radius: .3vw;
+    border: 2px solid gray;
+    font-weight: bolder;
+    user-select: none;
+  }
+  
+  .available_from{
+    font-size: 1.7vw;
+    grid-area: available_from;
+  }
+  
+  .price{
+    grid-area: price;
+    font-size: 1.7vw;
+  }
+  
+  
+  
+  }
+  

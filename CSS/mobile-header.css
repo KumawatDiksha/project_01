@@ -1,0 +1,107 @@
+@media screen and (max-width:1000px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* for include font-femily in html */
+    header{
+      background-color: white;
+        font-family:  'Quicksand', 'Circular' ,sans-serif, Arial, Helvetica;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    
+    /* header part start  */
+    
+    /* navbar styles  */
+    
+    /* css for wesite logo */
+    #logo{
+      text-decoration: none;
+      text-align: center;
+      z-index: 1;
+      color: red;
+      position: fixed;
+      font-size: 4vw;
+      background: white;
+      width: 100vw;
+      transform: 2s;
+      border-bottom: 1px solid #eee;
+    }
+    #logo:hover{
+    cursor: pointer;
+    }
+    
+    /* for center the links in navigation bar  */
+    .nav_ele{
+        display: none;
+    }
+     
+    /* manu bar start hare */
+    
+    .lines{
+      display: none;
+  }
+
+    
+    /* this class use for after scrolling the window/ */
+    .sticky{
+        padding: 2vw 0%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: white;
+        box-shadow:1px 1px 3px rgba(0, 0, 0, 0.2);
+        
+      }
+    
+      /* for apperring logo after scrolling */
+      .logo2 h1{
+            display: none;
+    }
+      /* to change the size of search bar after scrolling */
+      .searchbar2{
+        width: 80vw;
+        margin:auto;
+        padding:.2vw 5vw;
+        transition: .5s ease-in;
+      }
+      /* to fix menu position after scrolling */
+      #usericon{
+        display: none;
+       }
+      
+    .a1{
+        margin-top: 16vw;
+    }
+      
+    
+      /* this style class for front image that at the starting */
+    .front{
+      background-color: white;
+        text-align: center;
+        width:auto;
+    }
+
+    #search{display: none;}
+    
+    
+    
+   
+    
+    .propertyinfo{
+        width: 80vw;
+        height: auto;
+        
+    }
+    
+    /* postproprty page end hare */
+    
+    
+    /* header part end hare */
+    
+
+    
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post your property</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/responsive.css">
+    <link rel="stylesheet" href="/CSS/login_signup_box.css">
+
+
+</head>
+<body>
+
+    <button onclick="document.getElementById('loginbox').style.display='block'">login</button>
+
+
+    <main>
+
+        <div class="propertyinfo">
+            <form class="form"> 
+                <label for="fname" >First name</label> <br>
+                <input type="text" placeholder="Ex. kuldeep"><br>
+                <label for="lname">Last name</label> <br>
+                <input type="text" placeholder="Ex. saini"><br>
+                <label for="rent">Rent</label>
+                <input type="radio" id="rent" name="for" value="Rent">
+                <label for="buy">Buy</label>
+                <input type="radio" id="buy" name="for" value="Buy">
+                <br>
+                <label for="choose property type">Choose property type</label> <br>
+                <select name="property type" id="propertytype">
+                    <option value="other">Other</option>
+                    <option value="flat">Flat</option>
+                    <option value="home">Home</option>
+                    <option value="hostel&pg">Hostel&P.G.</option>
+                    <option value="land">Land</option>
+                    <option value="office">Office</option>
+                    <option value="room">Room</option>
+                    <option value="shop">Shop</option>
+                    <option value="showroom">Showroom</option>
+                    <option value="warehouse">Warehouse</option>
+                </select><br>
+                <label for="email">Enter your E-mail</label><br>
+                <input type="email" placeholder="Ex. example@gmail.com" name="Enter your E-mail" id="email"><br>
+                <input type="button" value="submit">
+                <label for="mobile">Phone</label><br>
+                <input type="tel" name="mobile" id="mobile"><br>
+                <label for="text" >Pin-code</label><br>
+                <input type="text" placeholder="enter pin code" required pattern="^[0-9]{6}$" title="Ex 302029" name="pincode" id="pincode"><br>
+
+
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+                
+            <ul>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Community</a></li>
+                <li><a href="">About</a></li>
+                <hr style="background-color: white; margin: 1vh 0vw;">
+                <p style=>&copy All rights reserved </p>
+            </ul>
+    </div>
+    
+    <script src="/JavaScript/index.js"></script>
+
+    </footer>
+</body>
+</html>

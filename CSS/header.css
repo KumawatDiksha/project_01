@@ -1,0 +1,381 @@
+@media screen and (min-width:1000px){
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+
+/* header part start  */
+header{font-family:  'Quicksand', 'Circular' ,sans-serif, Arial, Helvetica; z-index: 1000; background-color: white; }
+
+/* navbar styles  */
+.nav{
+    padding:0vw 0vw 2vw 0vw;
+    height: 2.5vw;
+    background: white;
+}
+
+/* css for wesite logo */
+#logo{
+    font-size: 1vw;
+    z-index: 3;
+    color: rgb(71, 174, 221);
+    position: fixed;
+    top: .4vw;
+    left: 2.8vw;
+    text-decoration: none;
+}
+#logo:hover{
+    cursor: pointer;
+}
+
+/* for center the links in navigation bar  */
+.nav_ele{
+    display: none;
+}
+
+.lines{
+    display: none ;
+}
+
+/* manu bar start hare */
+
+/* Dropup content (Hidden by Default) */
+
+
+.menulist0 {
+    width: 18vw;
+    padding: 1vw 0vw;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    top: 3vw;
+    right: 3.6%;
+    background-color: white ;
+    min-width: 11vw;
+    z-index: 5;
+    box-shadow: 1px 1px 1px #c7c7c7;
+}
+
+.userinfo{
+    padding: 1vw 2vw ;
+}
+#username{
+    font-size: 1.5vw; 
+    text-transform: capitalize; 
+    font-weight: bold; 
+    color: #1f1f1f;
+}
+
+.editprofile{
+    margin-top: .4vw;
+    font-size: .8vw;
+}
+
+.editprofile:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+  /* links inside the dropup */
+.submenulist{
+    padding: 1vw 2vw ;
+    font-size: 1.1vw;
+    text-decoration: none;
+}
+
+.menulist hr{
+    border: none; 
+    height: 1px; 
+    background-color: #fafafa; 
+}
+
+.menulist a{color: black; text-decoration: none;}
+
+#submenulist0{
+    display: none;
+}
+
+/* Change color of dropup links on hover */
+.submenulist:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+.submenulist:active{background-color: #dbdbdb; }
+
+.show{
+    display: block;
+}
+/* menu bar end hare  */
+
+
+/* css for search bar  */
+
+.search>hr{
+ display: none;
+}
+
+
+#search{display: none;}
+
+.search{
+    margin: auto;
+    border-radius: 100px;
+    background-color: #fefefe;
+    display: flex;
+    width: fit-content;
+    box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 30%);
+
+}
+
+.search hr{ border:none; background-color: #ddd; width: .5px; margin: 8px 3px;}
+
+.property_for,
+.property_type,
+.search-bar,
+.search_button{
+    font-size: 14px;
+    margin: auto;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    padding:0vw 1vw;
+    background-color: transparent;
+    height: 3vw;
+    text-align: initial;
+}
+.property_for,
+.property_type{
+    display: none;
+}
+
+.location:active,
+.search-bar:active,
+.property_for:active,
+.search_button:active{border: none;}
+
+.property_for:hover,
+.search-bar:hover,
+.property_type:hover,
+.search_button:hover{background-color: white;   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.04);
+}
+
+.search-bar{
+    padding:1vw 2vw;
+}
+.search_button:hover{ background-color: dodgerblue;}
+.search_button{
+    cursor: pointer;
+    padding: 0vw 2.5vw;
+    color: white;
+    background-color:dodgerblue;
+}
+
+
+
+
+
+/* to fix menu position after scrolling */
+#usericon{
+    z-index: 2;
+    position: fixed;
+    top:auto;
+    right: 0%;
+}
+
+
+
+
+/* this style class for front image that at the starting */
+.front{
+    z-index: 2;
+    padding: 1.5vw 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+    transition:  .5s;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+/* signup&login page start hare */
+
+/* thies classes use for login & singup page  */
+.signup,.login{
+    z-index: 5;
+    padding: .3vw .7vw;
+    margin: .5vw;
+    background-color: rgba(255, 245, 245, 0.089);
+    display: none;
+    text-decoration: none;
+    color: white;
+    border-radius: 3vw;
+    border:.1vw solid white;
+    
+}
+
+
+
+/* these styles for styling inside singnup & login page  */
+/* input css */
+.userdata input{ 
+    width: 100%;
+    padding:1% 2%;
+    margin:.8vw 0vw ;
+    display: inline-block;
+    border: 1px solid #ccc;   
+    box-sizing: border-box;
+    font-size: 120%;
+}
+
+/* for giving padding to user entred data  */
+.userdata,
+.postpropertybox{
+    background-color: white;
+    padding:2% 6%;}
+    
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+        color: white;
+        width: auto;
+    padding:1vh 1vw;
+    background-color:rgb(255, 81, 0);
+    border: gray 1px solid ;
+    border-radius: 3px;
+    font-size: 120%;
+}      
+.cancelbtn:hover{ /*for giving cancelbtn hover property*/     
+    background-color: #cf4318d8;
+}
+
+/* this class for forgate passward */
+span.fpsw{
+    float:right;
+    padding: 1%;
+}
+
+/* after clicking btn singnup & login box css  */
+.signupbox,
+.loginbox  {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0%; 
+    top: 0%;
+    width:100vw;
+    height:100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: auto;
+}
+
+/* for login &signup btn to give extra styles */
+.signupboxanimate{
+    z-index: 5vw;
+    margin: 0%auto 15%auto;
+    border: 1px solid white;
+    width: 80%;
+}
+.loginboxanimate{
+    z-index: 5vw;
+    margin: 4%auto 15%auto;
+    border: 1px solid white;
+    width: 80%;
+}
+
+
+.signup2,
+.login2{
+    margin-top: 2vh;
+    color: white;
+    width:100%;
+    height:6vh;
+    background-color:rgb(255, 81, 0);
+    font-size: 130%;
+    border-radius: 10px;
+    border: 2px solid gray;
+}
+
+.login2:hover,
+.signup2:hover{
+    background-color:rgba(255, 81, 0, 0.829);
+}
+.or{
+    color: rgba(0, 0, 0, 0.603);
+    font-size: 3vh;
+    margin: 0% 48%; 
+    
+}
+.login3,
+.signup3{ 
+    
+    color: white;
+    width:40%;
+    height:6vh;
+    background-color:rgb(255, 81, 0);
+    font-size: 130%;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin:4vh 21.5vw 0vh ;
+    
+}
+
+.login3:hover{
+    background-color:rgb(255, 81, 0, 0.829);
+}
+
+.close{
+    padding:.5vw 1.5vw;
+    float: right;
+    color: rgba(0, 0, 0, 0.507);
+    font-size:150%;
+    font-weight:bolder;
+}
+.close:hover,
+.close:focus{
+    color:red;
+    cursor: pointer;
+}
+
+    /* Add Zoom Animation */
+    .signupboxanimate,
+    .loginboxanimate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+    
+    /* for giving login & signup box animation for displaying */
+    @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+    }
+    
+    @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+    }
+    /* signup&login page end hare */
+    
+    /* postproperty page  */
+    
+    .propertyinfo{
+        width: 80vw;
+        height: auto;
+        
+    }
+    
+    
+    /* postproprty page end hare */
+    
+    
+    /* header part end hare */
+
+    
+    
+}

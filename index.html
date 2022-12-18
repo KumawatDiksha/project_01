@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@5
+00&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolet plus</title>
+
+    <!-- css links -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="/CSS/responsive-index.css">
+    <link rel="stylesheet" href="/CSS/index-header.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/responsive-footer.css">
+    <link rel="stylesheet" href="/CSS/search-bar.css">
+    <link rel="stylesheet" href="/CSS/mobile-header.css">
+    <link rel="stylesheet" href="/CSS/login_signup_box.css">
+    <!-- java script links -->
+
+</head>
+
+<body>
+
+
+    <my-header></my-header>
+    
+    <main>
+
+        <!-- property-categaries start hare -->
+        <div id="property" class="property-categaries">
+            <p class="large-font">Click what you want</p>
+
+            <!-- categaries list on home page  -->
+
+            <!-- homes -->
+            <a  href="/propertylistpage/propertylistpage.html" >
+            <button onclick='propertyType(this)' value="Home" class="home"
+                style="background-image: url('./media/home.jpg');">
+                <h1>Homes</h1>
+            </button>
+            </a>
+
+            <!-- shops -->
+            <a href="/propertylistpage/propertylistpage.html">
+                <button onclick='propertyType(this)' value="Shop" class="categary-box"
+                    style="background-image: url('./media/shop.jpg');">
+                    <h1>Shops</h1>
+                </button>
+            </a>
+
+
+            <!-- showrooms -->
+            <a href="/propertylistpage/propertylistpage.html">
+                <button onclick='propertyType(this)' value="Showrooms" class="categary-box"
+                    style="background-image: url('./media/showroom.jpg');">
+                    <h1>Showrooms</h1>
+                </button>
+            </a>
+
+
+            <!-- rooms -->
+            <a href="/propertylistpage/propertylistpage.html">
+                <button onclick='propertyType(this)' value="Room" class="categary-box"
+                    style="background-image: url('./media/room.jpg');">
+                    <h1>Want a room</h1>
+                </button>
+            </a>
+
+
+            <!-- land -->
+            <a href="/propertylistpage/propertylistpage.html">
+                <button onclick='propertyType(this)' value="land" class="categary-box"
+                    style="background-image: url('./media/land.jpg');">
+                    <h1>Find land area</h1>
+                </button>
+            </a>
+
+
+            <!-- offices -->
+            <a href="/propertylistpage/propertylistpage.html">
+                <button onclick='propertyType(this)' class="categary-box" value="Office"
+                    style="background-image: url('./media/office.jpg');">
+                    <h1>Office</h1>
+                </button>
+            </a>
+
+
+            <!-- hostelandpg -->
+            <a href="/propertylistpage/propertylistpage.html">
+                <button onclick='propertyType(this)' value="Hostel&P.G" class="categary-box"
+                    style="background-image: url('./media/hostel.jpg');">
+                    <h1>Hostel/P.G.</h1>
+                </button>
+            </a>
+
+            <!-- flats -->
+            <a href="/propertylistpage/propertylistpage.html">
+                <button onclick='propertyType(this)' value="Flat" class="categary-box"
+                    style="background-image: url('./media/flat.jpg');">
+                    <h1>Flats</h1>
+                </button>
+            </a>
+
+
+            <!-- warehouses -->
+            <a href="/propertylistpage/propertylistpage.html">
+                <button id="warehouses" onclick='propertyType(this)' value="Warehouse" class="categary-box"
+                    style="background-image: url('./media/warehouse.jpg');">
+                    <h1>Warehouses</h1>
+                </button>
+            </a>
+
+        </div>
+
+        <!-- property-categaries end hare -->
+
+    </main>
+    <!-- main part end hare -->
+
+
+
+    <!-- this class is define for footer part -->
+    
+    <my-footer></my-footer>
+    
+    
+    <script src="/JavaScript/header&footerpart.js"></script>
+    <script src="./JavaScript/Login.js"></script>
+    <script src="/JavaScript/homepage.js"></script>
+    <script>
+        
+        let propertyData = {{{list}}};
+        
+        function propertyType(data) {
+            localStorage.removeItem('search_values_select_btn2');
+            localStorage.setItem("search_values_select_btn2", data.value);
+        }
+
+              
+        </script>
+        <script src="/JavaScript/search-bar.js"></script>
+    <script src="https://cse.google.com/cse.js?cx=ff364bf11f740b51a"></script>
+
+</body>
+
+</html>

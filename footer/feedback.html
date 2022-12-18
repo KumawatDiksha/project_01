@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@5
+      00&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons   " rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Quicksand:wght@500&display=swap" rel="stylesheet">    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <link rel="stylesheet" href="./feedback.css">
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/mobile-header.css">
+    <link rel="stylesheet" href="/CSS/responsive-footer.css">
+    <link rel="stylesheet" href="./footer_link.css">
+    <link rel="stylesheet" href="/CSS/login_signup_box.css">
+
+    
+</head>
+
+
+<style>
+    .feedback_form{
+    border: 1px solid #eee;
+    margin: 2vw 20vw ;
+    padding: 2vw;
+}
+
+
+.form-group input,
+.form-group select{
+    margin: 3.2vw 1.2vw 0vw 1.2vw;
+    font-size: 1vw;
+    width: 94%;
+    height: 2vw;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    padding-left:.3vw ;
+}
+
+.form-group textarea{       
+    margin: 3.2vw 0vw 0vw 0vw;
+    padding-left:.4vw ;
+    font-size: 1vw;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    width: 94%;
+    height: 2vw ;
+}
+
+
+
+.send_feedback{
+    margin: 2vw 0vw;
+    background-color: #04AA6D;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    border-radius: 5px ;
+}
+
+.Rate_toletplus{
+    margin: .5vw 1.5vw ;
+    font-size: 1vw;
+}
+.fielderr{
+    margin: 0vw 1.5vw;
+    font-size: .8vw;
+}
+
+@media screen and (max-width:1000px) {
+    .feedback_form{
+        border: 1px solid #eee;
+        margin: 2vw;
+    }
+    
+    
+    .form-group input,
+    .form-group select{
+        margin: 6.6vw 3.6vw 0vw 3.6vw;
+        font-size: 3vw;
+        width: 94%;
+        height: 6vw;
+        border: none;
+        border-bottom: 1px solid #bbb;
+        padding-left:.3vw ;
+    }
+    
+    .form-group textarea{       
+        margin: 6.6vw 0vw 0vw 0vw;
+        padding-left: .4vw ;
+        font-size: 3vw;
+        border: none;
+        border-bottom: 1px solid #bbb;
+        width: 94%;
+        height: 4vw ;
+    }
+    
+    
+    
+    .send_feedback{
+        background-color: #04AA6D;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Raleway;
+        cursor: pointer;
+        border-radius: 5px ;
+    }
+    
+    .Rate_toletplus{
+        margin: 1.5vw 4.5vw ;
+        font-size: 3vw;
+    }
+    .fielderr{
+        margin: 0vw 1.5vw;
+        font-size: .8vw;
+    }
+    
+}
+</style>
+
+
+
+<body>
+
+    <!-- this tag is define for render header part  -->
+    <my-header></my-header>
+
+    <main>
+
+
+        <div class="footer_box">
+
+            <div class="footer_links">
+                <ul>
+                    <li><a href="/footer/about.html">About Us</a></li>
+                    <li><a href="/footer/blog/blogs.html">Blog</a></li>
+                    <li><a href="/footer/contect_us/contect_us.html">Contact Us</a></li>
+                    <li class="footer_links_active"><a href="/footer/feedback.html">Feedback</a></li>
+                    <li><a href="/footer/FAQ/FAQ.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="feedback_form">
+
+                <form action="" style="text-align: center;">
+                    <div class=""></div>
+                    <div class="form-group"><input type="text" placeholder="Name">
+                        <div class="fielderr"></div>
+                    </div>
+                    <div class="form-group"><input type="text" placeholder="Email Address">
+                        <div class="fielderr"></div>
+                    </div>
+                    <div class="form-group"><select name="feedbackType" id="feedbackType">
+                        <option value="">Select Feedback</option>
+                        <option value="I want to report a problem">I want to report a problem</option>
+                        <option value="I have a suggestion">I have a suggestion</option>
+                        <option value="I want to compliment Toletplus">I want to compliment Toletplus</option>
+                        <option value="Other">Other</option>
+                    </select></div>
+                    <div class="form-group"><textarea placeholder="Query"></textarea>
+                        <div class="fielderr"></div>
+                        <div>
+                            <div class="Rate_toletplus">Rate Toletplus</div>
+                            <div class="rating"><i class="star" data-rating="Poor" data-star="1"></i><i class="star"
+                                    data-rating="Average" data-star="2"></i><i class="star" data-rating="Good"
+                                    data-star="3"></i><i class="star" data-rating="Excellent" data-star="4"></i><i
+                                    class="star" data-rating="Awesome" data-star="5"></i>
+                                <div class="status ratingErr"></div><input type="hidden" id="status-info" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="send_feedback">Send Feedback</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- this tag is define for render footer part  -->
+    <my-footer></my-footer>
+
+    <!-- java script tags  -->
+    <script src="./deshboard_for_property_owners.js"></script>
+    <script src="/JavaScript/header&footerpart.js"></script>
+    <script src="/JavaScript/index.js"></script>
+</body>
+
+</html>

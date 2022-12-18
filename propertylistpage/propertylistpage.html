@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="stylesheet" href="/CSS/search-bar.css">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>property</title>
+
+    <!-- css link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/mobile-header.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/responsive-footer.css">
+    <link rel="stylesheet" href="/CSS/price_slider.css">
+    <link rel="stylesheet" href="./propertylist.css">
+    <link rel="stylesheet" href="./propertylistpageformobile.css">
+    <link rel="stylesheet" href="/CSS/login_signup_box.css">
+
+    <!-- java script links -->
+</head>
+
+<body>
+
+
+
+    <my-header></my-header>
+
+
+    <main>
+
+
+        <button class="backbtn" type="button" value="go back !" onclick="history.back()">&#10094;</button>
+
+        <!-- for filter buttons -->
+
+        <div class="inline" style=" transition: 0.3s ease-out; ">
+
+            <!-- filter accordin to loacation -->
+            <button class="filter">nearby</button>
+
+            <!-- this select button for select property for rent or buy -->
+            <select name="property_for" id="property_for">
+                <option value="rent">Rent</option>
+                <option value="buy">Buy</option>
+            </select>
+
+            <!-- fillter button for according price  -->
+            <button class="filter" onclick="document.getElementsByClassName('slider_box')[0].style.display='block'">
+                Price </button>
+
+
+            <div class="slider_box" id="slider_box">
+                <div style="padding: 8px 25px; cursor: pointer; float: right; font:  bolder; font-size: 25px; text-decoration: none; "
+                    class="close_slider"
+                    onclick="document.getElementsByClassName('slider_box')[0].style.display='none'">&times;</div>
+
+                <div style="margin:1vw 2vw 10% 7%; font-size: 18px; color: #454444;">Choose price according to your
+                    budget</div>
+
+
+                <div class='slider' id="slider-distance">
+                    <div>
+                        <div inverse-left style="width:70%;"></div>
+                        <div inverse-right style="width:70%;"></div>
+                        <div range style="left:0%;right:0%;"></div>
+                        <span thumb style="left:0%;"></span>
+                        <span thumb style="left:100%;"></span>
+                        <div sign style="left:0%;">
+                            <span id="min_value">0</span>
+                        </div>
+                        <div sign style="left:100%;">
+                            <span id="max_value">1000K</span>
+                        </div>
+                    </div>
+                    <input id="min_range" type="range" value="0" max="1000" min="0" step="5" oninput="
+                            this.value=Math.min(this.value,document.getElementById('slider-distance').childNodes[5].value-50);
+                            let value = (this.value/parseInt(this.max))*100
+                        var children = document.getElementById('slider-distance').childNodes[1].childNodes;
+                        children[1].style.width=value+'%';
+                        children[5].style.left=value+'%';
+                        children[7].style.left=value+'%';children[11].style.left=value+'%';
+                        document.getElementById('min_price').innerText=this.value + 'k';
+                        children[11].childNodes[1].innerHTML=this.value + 'k';" />
+
+                    <input id="max_range" type="range" value="1000" max="1000" min="0" step="5" oninput="
+                        this.value=Math.max(this.value,document.getElementById('slider-distance').childNodes[3].value-(-50));
+                        let value = (this.value/parseInt(this.max))*100
+                        var children = document.getElementById('slider-distance').childNodes[1].childNodes;
+                        children[3].style.width=(100-value)+'%';
+                        children[5].style.right=(100-value)+'%';
+                        children[9].style.left=value+'%';children[13].style.left=value+'%';
+                        children[13].childNodes[1].innerText=this.value+'k';
+                        document.getElementById('max_price').innerText=this.value +'k' ;" />
+                </div>
+
+                <div class="price_box">
+                    <div class="min_price">
+                        <div style="font-size: medium; color: #888;">min price</div>
+                        <span id="min_price" style="font-size: 23px; color: #444;">0</span>
+                    </div>
+                    <div style=" margin: auto -10%auto;">_ </div>
+                    <div class="max_price">
+                        <div style="font-size: medium; color: #888;">max price</div>
+                        <span id="max_price" style="font-size: 23px; color: #444;">1000k +</span>
+                    </div>
+                </div>
+                <hr style="border: none; height: 1px; background-color: #efefef; margin: 20px 0vw; ">
+                <div class="price_slider_button">
+                    <button class="close_slider" style="background-color:transparent; border: none; "
+                        onclick="document.getElementsByClassName('slider_box')[0].style.display='none'">Close</button>
+                    <button id="price_slider"
+                        onclick="filter_property(),document.getElementsByClassName('slider_box')[0].style.display='none'">Save</button>
+                </div>
+
+            </div>
+
+
+            <!-- filter for select type of property -->
+            <div class="type">
+                <select onchange="filter_property()" name="property type" id="property_type">
+                    <option value="Other">Other</option>
+                    <option value="Flat">Flat</option>
+                    <option value="Home">Home</option>
+                    <option value="Hostel&pg">Hostel&P.G.</option>
+                    <option value="Land">Land</option>
+                    <option value="Office">Office</option>
+                    <option value="Room">Room</option>
+                    <option value="Shop">Shop</option>
+                    <option value="Showroom">Showroom</option>
+                    <option value="Warehouse">Warehouse</option>
+                </select>
+
+            </div>
+
+
+        </div>
+        <!-- filter part end hare -->
+
+
+
+
+
+
+        <div class="property_container" id="property_list" style="    transition: .3s ease-in-out;">
+            
+        </div>
+
+        <!-- property image container end hare -->
+
+
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/JavaScript/header&footerpart.js"></script>
+    <script src="/JavaScript/search-bar.js"></script>
+    <script src="/JavaScript/index.js"></script>
+    <script>
+
+
+
+        var propertyData = {{{ list }}};
+        console.log(propertyData)
+
+        //   this data for change values according to  
+        var get = localStorage.search_values_select_btn2
+
+
+        if (get == "Flat") {
+            document.getElementById('property_type').getElementsByTagName('option')[1].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[1].selected = 'selected'
+
+        }
+        else if (get == "Home") {
+            document.getElementById('property_type').getElementsByTagName('option')[2].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[2].selected = 'selected'
+        }
+        else if (get == "Hostel&pg") {
+            document.getElementById('property_type').getElementsByTagName('option')[3].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[3].selected = 'selected'
+        }
+        else if (get == "land") {
+            document.getElementById('property_type').getElementsByTagName('option')[4].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[4].selected = 'selected'
+        }
+        else if (get == "Office") {
+            document.getElementById('property_type').getElementsByTagName('option')[5].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[5].selected = 'selected'
+        }
+        else if (get == "Room") {
+            document.getElementById('property_type').getElementsByTagName('option')[6].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[6].selected = 'selected'
+        }
+        else if (get == "Shop") {
+            document.getElementById('property_type').getElementsByTagName('option')[7].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[7].selected = 'selected'
+        }
+        else if (get == "Showroom") {
+            document.getElementById('property_type').getElementsByTagName('option')[8].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[8].selected = 'selected'
+        }
+        else if (get == "Warehouse") {
+            document.getElementById('property_type').getElementsByTagName('option')[9].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[9].selected = 'selected'
+        }
+        else {
+            document.getElementById('property_type').getElementsByTagName('option')[0].selected = 'selected';
+            search_select_btn2.getElementsByTagName('option')[0].selected = 'selected'
+        }
+
+        //this part for select property type rent or buy
+        var property_for = localStorage.search_values_select_btn;
+        if (property_for == 'buy') {
+            document.getElementById('property_for').getElementsByTagName('option')[1].selected = 'selected'
+            search_select_btn.getElementsByTagName('option')[1].selected = 'selected'
+            filter_property();
+
+        }
+        else {
+            document.getElementById('property_for').getElementsByTagName('option')[0].selected = 'selected';
+            search_select_btn.getElementsByTagName('option')[0].selected = 'selected'
+            filter_property();
+        }
+
+        // let search_input_data = localStorage.search_values_input;
+
+        // this function for compair the types of propertyes
+        function chack(property) {
+            if (document.getElementById('property_type').value == "Other") {
+                return property.propertyType == property.propertyType &&
+                    property.expectedPrice >= document.getElementById('min_range').value * 1000 &&
+                    //    property.Locality == localStorage.search_values_input&&
+                    property.expectedPrice <= document.getElementById('max_range').value * 1000;
+            }
+            else {
+                return property.propertyType == document.getElementById('property_type').value &&
+                    property.expectedPrice >= document.getElementById('min_range').value * 1000 &&
+                    //    property.Locality == localStorage.search_values_input&&
+                    property.expectedPrice <= document.getElementById('max_range').value * 1000;
+            }
+        }
+
+
+
+
+        // this function get values from chack() function and fillter data according to values
+        function filter_property() {
+
+            localStorage.setItem('search_values_select_btn', document.getElementById("property_for").value)
+            localStorage.setItem('search_values_select_btn2', document.getElementById("property_type").value)
+
+            // this is for removing data from the  box to show new data
+            document.getElementById('property_list').innerHTML = "";
+
+
+            // this function is call for print the each values of the array
+            propertyData.filter(chack).forEach((result, idx) => {
+
+                var s = result.imageUrl;
+
+                var imageArray = s.split(",");
+                imageArray.pop();
+
+
+                let img = '';
+                for (let q = 0; q < imageArray.length; q++) {
+                    img += `<div class="mySlides fade"><img src="${imageArray[q]}" class="slideshow-container"> </div>`;
+                }
+
+                // Construct card content
+                var content = `
+                <!-- property images container start hare -->
+                    <div class="propertyimages">
+                        <!-- this div is define for show previous image -->
+                        <div class="prev"
+                            onclick="this.parentNode.getElementsByClassName('slideshow-container')[0].scrollBy({top: 0, left: -250, behavior: 'smooth'})">
+                            &#10096;</div>
+                        <a href="http://toletplus.herokuapp.com/viewpropertypage/${result.Id}">
+                            <!-- Slideshow container -->
+                            <div class="slideshow-container">${img}</div>
+                            <!-- this div is define for next previous image -->
+                        </a>
+                        <div class="next"
+                            onclick="this.parentNode.getElementsByClassName('slideshow-container')[0].scrollBy({top: 0, left: +250, behavior: 'smooth'})  ">
+                            &#10095;</div>
+                    
+                        <a href="http://toletplus.herokuapp.com/viewpropertypage/${result.Id}"
+                            style="text-decoration:none; color:black;">
+                            <!-- property inforamation part start hare -->
+                            <div class="propertydetail">
+                                <div class="property_location" id="property_location-${idx}">${result.propertyType} available in
+                                    ${result.city}
+                                </div>
+                                <address class="address" id="address"> ${result.address} | near ${result.landmark}</address>
+                                <div class="deatiles" id="deatiles"> ${result.Furnished} | ${result.parking} </div>
+                                <div class="available_from" id="available_from">Available from : ${result.AvilabeFrom}</div>
+                                <div class="price" id="price">${result.expectedPrice} ₹</div>
+                                <button class="contect_owner" id="contect_owner">Contect owner</button>
+                            </div>
+                        </a>
+                    </div>`;
+
+
+
+                // Append newyly created card element to the container
+                document.getElementById('property_list').innerHTML += content;
+
+
+            })
+        }
+
+
+        // this is for heid header
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {a()}
+function a() {
+  if (screen.width <= 1000) {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.bottom = "0px";
+      document.getElementById("logo").style.top = "0px"
+      document.getElementById("search").style.top = "10.1vw"
+      document.getElementsByClassName("inline")[0].style.top = "20.6vw"
+      document.getElementById("property_list").style.paddingTop = "15vw";
+    } else {
+        document.getElementById("navbar").style.bottom = "-13vw";
+        document.getElementById("logo").style.top = "-20.6vw";
+        document.getElementById("search").style.top = "0vw";
+        document.getElementsByClassName("inline")[0].style.top = "0vw"
+        document.getElementById("property_list").style.paddingTop = "0vw";
+        
+    }
+    prevScrollpos = currentScrollPos;
+  }
+}
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

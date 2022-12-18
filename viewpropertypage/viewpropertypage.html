@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="/viewpropertypage/viewpropertypage.css">
+    {{!--
+    <link rel="stylesheet" href="/viewpropertypage/propertylist.css"> --}}
+    <link rel="stylesheet" href="/viewpropertypage/viewpropertypageforsmalldevices.css">
+    <link rel="stylesheet" href="/CSS/login_signup_box.css">
+
+
+
+
+
+</head>
+
+
+<body>
+    <main>
+
+
+
+        <!-- this button for give user back button  -->
+
+        <button class="backbtn" type="button" value="go back !" onclick="history.back()">&#10094;</button>
+
+
+
+        <!-- this contener is for property address that show on the top of page  -->
+        <div class="propertyaddress">
+
+            <div id="for" class="for"> available For <br> {{detailList.Available_For}}</div>
+            <div id="popertydeatiles" class="propertydeatiles">Shop in {{detailList.Locality}}</div>
+            <address id="address" class="address" style="margin-top: -.4vw;">{{detailList.address}},
+                {{detailList.landmark}}</address>
+
+        </div>
+
+        <div class="propertcontainer">
+
+            <!-- property images container start hare -->
+
+            <div class="propertyimages">
+
+
+                <!-- Slideshow container -->
+                <div class="slideshow-container" class="propertcontainer" id="property_list"></div>
+
+
+                <!-- Next and previous buttons -->
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            </div>
+
+            <br>
+
+            <!-- css for property info -->
+
+            <div class="flex_item">
+
+                <div class="propertyinfo2">
+                    <div class="fecilities">
+
+                        <div class="agebuild0">age of buliding</div>
+                        <div id="age_of_building" class="agebuild">{{detailList.ageofpropetry}}</div>
+
+                        <div class="parking0 ">parking</div>
+                        <div id="parking" class="parking">{{detailList.parking}}</div>
+
+                        <div class="owner0">ownership-type</div>
+                        <div id="owner_type" class="owner">{{detailList.ownership_type}}</div>
+
+                        <div class="floor0">floor: </div>
+                        <div id="floor" class="floor">{{detailList.floor}}</div>
+
+                        <div class="security0">security</div>
+                        <div id="security" class="security">{{detailList.security}}</div>
+
+                    </div>
+
+                    <div>
+                        <div class="discription">
+                            <p>discription</p>
+                            <span id="discription" class="article">
+                                {{detailList.description}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="propertyinfo1">
+
+                    <div class="info">
+                        <div class="price0">price</div>
+                        <div id="price" class="price1">₹ {{detailList.expectedPrice}} /month</div>
+
+                        <div class="area0">area</div>
+                        <div id="area" class="area1">{{detailList.propertyArea}} {{detailList.Areaunit}}</div>
+
+                        <button class="owener">contect owner</button>
+                    </div>
+
+                    <span class="wrong">
+                        <p class="pwrong">Report what was worng in this information ?</p><br>
+                        <button class="button1 "> Listed by Broker</button>
+                        <button class="button2 "> Not Available</button>
+                        <button class="button3 "> Wrong Inforamation</button>
+                    </span>
+                </div>
+            </div>
+
+
+            <hr style="border: none; height: 1px; background-color: rgb(230, 230, 230); margin: 2vw 1%;">
+            <!-- this is for map api -->
+            <div id="property_deatiles1" class="propertydeatiles" style="margin-bottom:.5vh ;"></div>
+            <div id="address1" class="address" style="margin-top: -.4vw;"></div>
+
+
+            <iframe height="500vh" width="100%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4029.318153515002!2d75.72961283168733!3d26.79804093850352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dcb5d8a4bb963%3A0xa2802a5d067c84bb!2sToLetPlus!5e0!3m2!1sen!2sin!4v1651398090152!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <hr style="border: none; height: 1px; background-color: rgb(230, 230, 230); margin: 3vw 1%;">
+            <br>
+            <script>
+
+                var propertyImages = {{{ images }}};
+                var imageArray = propertyImages.split(",");
+                imageArray.pop();
+                console.log(imageArray);
+
+                var imageData = '';
+                var dotPosition = '';
+                for (let i = 0; i < imageArray.length; i++) {
+                    imageData = imageData + `<div class="mySlides fade">
+                        <div class="numbertext">${i + 1} / ${imageArray.length}</div>
+                        <img src="${imageArray[i]}" class="slideshow-container">
+                    </div>`;
+                    dotPosition = dotPosition + `<span class="dot" onclick="currentSlide(${i + 1})"></span>`;
+                }
+
+                var contents = `${imageData}`
+
+
+
+
+                document.getElementById('property_list').innerHTML = contents;
+
+
+
+            </script>
+
+            <script src="/viewpropertypage/view_property_list.js"></script>
+            <script src="/JavaScript/imageslideshow.js"></script>
+
+
+</body>
+
+</html>

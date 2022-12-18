@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@5
+00&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./post_property_form_page.css">
+  <link rel="stylesheet" href="./post_property_form_page_for_mobile.css">
+  <link rel="stylesheet" href="/CSS/header.css">
+  <link rel="stylesheet" href="/CSS/footer.css">
+  <link rel="stylesheet" href="/CSS/mobile-header.css">
+  <link rel="stylesheet" href="/CSS/responsive-footer.css">
+  <link rel="stylesheet" href="/CSS/login_signup_box.css">
+
+</head>
+
+<body>
+  <my-header></my-header>
+
+  <main>
+
+    <div class="property_info">
+      <span class="step" > Property Detiles</span>
+      <span class="step"> Location Details</span>
+      <span class="step"> Rental Details</span>
+      <span class="step"> Amenities</span>
+      <span class="step"> Gallery</span>
+      <span class="step"> Additional Information</span>
+    </div>
+
+    <form action="postProperty" class="formbox" id="formbox" method="post" enctype="multipart/form-data" >
+
+      <div class="tab">
+
+        <div class=" property_deatiles">
+
+          <div class="available_for">
+            <label for="available_for">Available for*</label>
+            <select name="available_for" id="available_for" autofocus>
+              <option value="Rent">Rent</option>
+              <option value="Sell">Sell</option>
+            </select>
+          </div>
+
+
+          <div class="ownership_type">
+            <label for="ownership_type">Ownership type*</label>
+            <select name="ownership_type" id="ownership_type">
+              <option name="owner" value="Owner">Owner</option>
+              <option name="Broker" value="Broker">Broker</option>
+            </select>
+          </div>
+
+
+          <div class="type">
+            <label for="property_type">Property type*</label>
+            <select name="property_type" id="property_type">
+              <option value="Other">Other</option>
+              <option value="Flat">Flat</option>
+              <option value="Home">Home</option>
+              <option value="Hostel_P.G.">Hostel& P.G.</option>
+              <option value="Land">Land</option>
+              <option value="Office">Office</option>
+              <option value="Room">Room</option>
+              <option value="Shop">Shop</option>
+              <option value="Showroom">Showroom</option>
+              <option value="Warehouse">Warehouse</option>
+            </select>
+          </div>
+
+
+
+          <div class="property_age">
+            <label for="property_age">Property age*</label>
+            <select name="ageofpropetry" id="ageofproperty">
+              <option value="Less then one Year">Less then one Year</option>
+              <option value="1 Year to 5 year">1 Year to 5 year</option>
+              <option value="5 Year to 10 year">5 Year to 10 year</option>
+              <option value="More then 10 year">"More then 10 year"</option>
+            </select>
+          </div>
+
+          <div class="floor">
+            <label for="floor">Floor*</label>
+            <select name="floor" id="floor">
+              <option value="Nobuilding">No building</option>
+              <option value="groundfloor">Ground floor</option>
+              <option value="groundfloor">1</option>
+              <option value="groundfloor">2</option>
+              <option value="groundfloor">3</option>
+              <option value="groundfloor">4</option>
+              <option value="groundfloor">5</option>
+              <option value="groundfloor">6</option>
+            </select>
+          </div>
+
+
+
+          <div class="property_area">
+            <label for="property_area">Property area*</label> <br>
+            <div class="area_unit">
+              <input id="property_area" type="number" placeholder="area" name="property_area">
+              <select name="area_unit" id="area_unit">
+                <option value="Sq.mtr">Sq.Mtr</option>
+                <option value="Sq.ft">Sq.Ft</option>
+                <option value="Sq.yard">Sq.Yard</option>
+                <option value="hector">Hector</option>
+              </select>
+            </div>
+
+          </div>
+
+
+
+          <div class="furnished">
+            <label for="furnished">Furnished*</label>
+            <select name="furnished" id="furnished">
+              <option value="Un-Furnished">Un-Furnished</option>
+              <option value="Semi-Furnished">Semi-Furnished</option>
+              <option value="Furnished">Furnished</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- location deatiles -->
+      <div class="tab">
+
+        <div class="location_deatiles ">
+
+          <div class="city">
+            <label style="margin: 0%;">City*</label>
+            <select name="city" id="city">
+              <option value="jaipur">Jaipur</option>
+            </select>
+          </div>
+
+          <div class="locality">
+            <label>Locality*</label>
+            <input id="locality" type="text" required name="locality">
+          </div>
+
+          <div class="landmark">
+            <label>Landmark*</label>
+            <input id="landmark" type="text" required name="landmark">
+          </div>
+
+          <div class="address">
+            <label>Address*</label>
+            <input id="address" type="text"  required name="address">
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <div class="tab">
+
+        <div class="Rentail_deatiles">
+
+          <span class="expected_rent">
+            <label for="">Expected Rent</label>
+            <input id="expected_rent" type="number" required name="expected_rent">
+          </span>
+
+          <span class="monthaly_maintenance">
+            <label for="">Monthly Maintenance </label>
+            <input id="monthly_maintenance" type="number" required name="monthly_maintenance">
+          </span>
+
+          <span class="rent_negotiable">
+            <label>Rent Negotiable</label>
+            <select name="rent_negotiable" id="rent_negotiable">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </span>
+
+
+          <span class="deposit">
+            <label for="">Deposit </label>
+            <input id="deposit" type="number" required name="deposit">
+          </span>
+
+          <span class="lease_duration">
+            <label for="">Lease Duration</label>
+            <select name="lease_duration" id="lease_duration">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </span>
+
+
+          <span class="lockin_period">
+
+            <label for="">Lockin period</label>
+            <select name="lockin_period" id="lockin_period">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </span>
+
+          <span class="availabel_from">
+            <label for="">Avaliable From</label>
+            <input type="date" id="date" name="date">
+          </span>
+
+        </div>
+      </div>
+
+
+      <!-- facilities available on location -->
+      <div class="tab">
+
+        <div class=" facilities">
+
+          <span class="parking">
+            <label for="parking">Parking</label>
+            <select name="parking" id="parking">
+              <option value="none">None</option>
+              <option value="Public">Public</option>
+              <option value="Reserved_&_Public">Reserved & Public</option>
+              <option value="Reserved">Reserved</option>
+            </select>
+          </span>
+
+
+          <span class="washroom">
+            <label for="washroom">Washroom</label>
+            <select name="washroom" id="washroom">
+              <option value="No_Washroom">No_Washroom</option>
+              <option value="Shared">Shared</option>
+              <option value="Private">private</option>
+            </select>
+          </span>
+
+
+          <span class="security">
+
+            <label class="security" for="security">Security</label>
+            <select name="security" id="security">
+              <option value="Not_Available">No Available</option>
+              <option value="Available">Available</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <!-- photo gallery  -->
+      <div class="tab">
+
+        <div class="gallery">
+
+          <label for="">Photos</label>
+          <input type="file" id="photo" name="photo" required multiple>
+          <div id="preview"></div>
+        </div>
+      </div>
+
+
+      <!-- additional information for property  -->
+      <div class="tab">
+        <div class=" additional_information ">
+          <label for="discription" class="discriptob">description</label>
+          <textarea name="discription" id="discription" cols="30" rows="10" required minlength="30"></textarea>
+        </div>
+      </div>
+      
+
+      <div style="overflow:auto;">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      </div>
+      
+      <!-- sumit button for form  -->
+      <button type="submit" id="submit" style="display: none;">Submit </button>
+<!-- 
+      <div id="msg">
+        <pre></pre>
+      </div> -->
+    </form>
+
+  </main>
+  <!-- For rander footer harE -->
+
+  <my-footer></my-footer>
+
+  <!-- javA script link  -->
+  <script src="/JavaScript/header&footerpart.js"></script>
+  <script src="/JavaScript/index.js"></script>
+  <script src="./post_property_form_page.js"></script>
+  
+  <script>
+    function previewImages() {
+
+      var preview = document.querySelector('#preview');
+      
+      if(this.files.length >5){
+           alert('You Cannot Enter More then 5 Images');
+           document.getElementById("nextBtn").disabled = true;
+      }
+      else if(this.files.length <2){
+        alert('You Need To Enter Minimum 2 images');
+        document.getElementById("nextBtn").disabled = true;
+      }
+      else{
+        document.getElementById("nextBtn").disabled = false;
+      if (this.files) {
+        [].forEach.call(this.files, readAndPreview);
+      }
+  }
+  
+    
+      function readAndPreview(file) {
+       
+        // Make sure `file.name` matches our extensions criteria
+        if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
+          return alert(file.name + " is not an image");
+        } // else...
+        
+        var reader = new FileReader();
+        
+        reader.addEventListener("load", function() {
+          var image = new Image();
+          image.height = 100;
+          image.title  = file.name;
+          image.src    = this.result;
+          preview.appendChild(image);
+        });
+        
+        reader.readAsDataURL(file);
+        
+      }
+    
+    }
+    
+    document.querySelector('#photo').addEventListener("change", previewImages);
+  
+</script>
+
+</body>
+</html>

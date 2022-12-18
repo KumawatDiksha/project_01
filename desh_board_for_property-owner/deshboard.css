@@ -1,0 +1,114 @@
+@media screen and (min-width:1000px) {
+    
+    /* this class for give styles to hr tag in deshboard_class  */
+    .deshboard hr,
+.deshboard_navigation_slides hr{
+    margin: 1.4vw 0vw;
+    background-color: #cccccc;
+    border: none;
+    height: .1px;
+}
+.deshboard_navigation_slides hr{
+    background-color: #e4e4e6;
+}
+
+
+/* this class gives grid to inside desh board */
+.deshboard{
+    font-family: sans-serif ;
+    display: grid;
+    grid-template-columns: 20vw auto;
+}
+
+
+/* this class is defined for heading part of the all slides */
+.heading{
+    padding: 1vw 1.5vw 0vw 1vw;
+}
+
+/* this class for naviagation part of the class */
+.deshboard_nevigations{
+    padding: 1.4vw 1vw;
+    /* background-color:#fefeff ; */
+    box-shadow: 1px 1px 1px #e4e4e6;
+}
+.deshboard_nevigations a{text-decoration: none;}
+
+
+/* this is for inside dives of deshboard_navigation class  */
+.deshboard_nevigations .card{
+    cursor: pointer;
+    font-weight: bold;
+    margin-top:.1vw ;
+    padding: 1vw 1.5vw;
+    font-size: .9vw;
+    color: #555555;
+}
+
+.deshboard_nevigations .card_active{background-color: #e1e1e7;}
+
+
+.deshboard_nevigations .card:hover,
+.active{
+    background-color: #f1f1f7;
+}
+
+/* To group all slides  */
+.deshboard_navigation_slides{
+    padding: 1.4vw 1.4vw 5vw 1.4vw;
+    height: auto;
+}
+
+
+.null{
+    font-size: 1.8vw;
+}
+
+
+
+
+
+/* this class for profile page  */
+
+
+.porfile{
+    display: none;
+}
+
+.profile .profile_lables{
+    margin: .5vw 1vw ;
+    font-size: 1vw;
+}
+
+.profile .form-name,
+.profile .form-email{
+    font-size: 1vw;
+    margin:.3vw 1vw 1.5vw 1vw;
+    padding: .2vw .8vw;
+}
+.profile .form-inline{
+    display: inline;
+    font-size: 1.4vw;
+    cursor: pointer;
+
+}
+
+.profile .form-number{
+    color: #555555;
+}
+
+.profile #saveprofile {
+    position: relative;
+    left: 40%;
+    top: 2vw;
+    border-radius: 3px;
+    background-color: #04AA6D;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+
+}
